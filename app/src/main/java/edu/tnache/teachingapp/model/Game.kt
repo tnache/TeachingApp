@@ -1,4 +1,4 @@
-package edu.axa.teachingapp.model
+package edu.tnache.teachingapp.model
 
 enum class GameState {
     NEW,

@@ -1,8 +1,8 @@
-package edu.axa.teachingapp
+package edu.tnache.teachingapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import edu.axa.teachingapp.ui.main.MainFragment
+import androidx.appcompat.app.AppCompatActivity
+import edu.tnache.teachingapp.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

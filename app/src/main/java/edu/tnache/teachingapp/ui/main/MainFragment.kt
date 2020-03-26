@@ -1,4 +1,4 @@
-package edu.axa.teachingapp.ui.main
+package edu.tnache.teachingapp.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import edu.axa.teachingapp.R
-import edu.axa.teachingapp.databinding.MainFragmentBinding
+import edu.tnache.teachingapp.R
+import edu.tnache.teachingapp.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
 

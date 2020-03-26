@@ -1,9 +1,9 @@
-package edu.axa.teachingapp.ui.main
+package edu.tnache.teachingapp.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import edu.axa.teachingapp.model.Game
-import edu.axa.teachingapp.model.GameField
+import edu.tnache.teachingapp.model.Game
+import edu.tnache.teachingapp.model.GameField
 
 class MainViewModel : ViewModel() {
 

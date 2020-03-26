@@ -8,7 +8,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "edu.axa.teachingapp"
+        applicationId "edu.tnache.teachingapp"
         minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
