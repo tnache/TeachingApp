@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="game"
+            type="edu.axa.teachingapp.model.Game" />
+        <variable
+            name="clicker"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainFragment">
+
+        <Button
+            android:id="@+id/button_0_0"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(0, 0)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_0_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_0_1"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(0, 1)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintEnd_toStartOf="@id/button_0_2"
+            app:layout_constraintStart_toEndOf="@+id/button_0_0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_0_2"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(0, 2)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_0_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_1_0"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(1, 0)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_0_1"
+            app:layout_constraintTop_toBottomOf="@id/button_0_0" />
+
+        <Button
+            android:id="@+id/button_1_1"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(1, 1)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintEnd_toStartOf="@id/button_1_2"
+            app:layout_constraintStart_toEndOf="@+id/button_1_0"
+            app:layout_constraintTop_toTopOf="@id/button_1_0" />
+
+        <Button
+            android:id="@+id/button_1_2"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(1, 2)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_1_1"
+            app:layout_constraintTop_toTopOf="@id/button_1_0" />
+        <Button
+            android:id="@+id/button_2_0"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(2, 0)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_2_1"
+            app:layout_constraintTop_toBottomOf="@id/button_1_0" />
+
+        <Button
+            android:id="@+id/button_2_1"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(2, 1)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintEnd_toStartOf="@id/button_2_2"
+            app:layout_constraintStart_toEndOf="@+id/button_2_0"
+            app:layout_constraintTop_toTopOf="@id/button_2_0" />
+
+        <Button
+            android:id="@+id/button_2_2"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_margin="4dp"
+            android:text="@{game.gameField.get(2, 2)}"
+            android:onClick="@{clicker}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_2_1"
+            app:layout_constraintTop_toTopOf="@id/button_2_0" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{game.state.name()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_2_0"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/turn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{game.turn.name()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state"/>
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{clicker}"
+            android:text="Reset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/turn"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
